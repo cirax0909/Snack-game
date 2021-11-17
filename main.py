@@ -35,5 +35,12 @@ while game_on:
         game_on = False
         score.game_over()
 
+    for segment in snake.segments:
+        if segment == snake.head:
+            pass
+        elif snake.head.distance(segment) < 10:
+            game_on = False
+            score.game_over()
+
 
 screen.exitonclick()
